@@ -14,16 +14,25 @@ int main(void)
     while (height > 23 || height < 0);
 
     //print the pyramid
-    for (i = 1; i <= height; i++)
+    for (i = 0; i < height; i++)
     {
-        //print spaces
-        for (j = 1; j <= (height - i); j++)
+        //print left spaces
+        for (j = 1; j < (height - i); j++)
         {
             printf(" ");
         }
 
-        //print hashes
-        for (k = 1; k <= (i + 1); k++)
+        //print left hashes
+        for (k = 0; k < (i + 1); k++)
+        {
+            printf("#");
+        }
+
+        //print middle space
+        printf("  ");
+
+        //print right hashes
+        for (k = 0; k < (i + 1); k++)
         {
             printf("#");
         }
